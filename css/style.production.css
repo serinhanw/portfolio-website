@@ -211,7 +211,7 @@ button:hover, button:focus, .button:hover, .button:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin: 50px 0;
+  margin: 0 50px;
 }
 
 .about-me__item {
@@ -294,13 +294,12 @@ td {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin: ;
 }
 
 form {
   display: block;
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 90px;
   font-size: 14px;
   font-weight: 500;
   line-height: 0.5;
@@ -374,7 +373,7 @@ section h1 {
   .grid {
     grid-gap: 10px;
   }
-  .grid__item:last child {
+  .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
