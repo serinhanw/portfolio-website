@@ -174,18 +174,18 @@ button:hover, button:focus, .button:hover, .button:focus {
   -ms-flex-preferred-size: 200px;
       flex-basis: 200px;
   text-align: right;
+
 }
 
 .navigation-list {
   list-style-type: none;
+  white-space: nowrap;
 }
 
 .navigation-list li {
   display: inline-block;
-  margin-left: 70px;
+  margin-left: 38px;
 }
-
-
 
 
 .navigation-list__item {
@@ -357,12 +357,22 @@ section h1 {
     font-size: 15px;
     text-align: left;
   }
+
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+  .navigation-list__item {
+    font-size: 18px;
+  }
+  .page-header__item:first-child {
+    max-width: 25%;
+  }
+  .navigation-list li {
+    margin-left: 4px;
   }
 }
 @media all and (max-width: 750px) {
@@ -422,6 +432,9 @@ section h1 {
   }
   #contact-info h2 {
     font-size: 18px;
+  }
+  .navigation-list__item {
+    font-size: 17px;
   }
 }
 
