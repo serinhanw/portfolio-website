@@ -156,7 +156,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .navigation-list {
   list-style-type: none;
-  white-space: nowrap;
+
 }
 
 .navigation-list li {
@@ -326,6 +326,9 @@ section h1 {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+  .navigation-list {
+    white-space: nowrap;
+  }
   .navigation-list__item {
     font-size: 18px;
   }
@@ -373,7 +376,7 @@ section h1 {
   .my-portrait {
     display: grid;
     justify-content: center;
-    margin-right: -40px;
+    margin-left: 40px;
   }
   .skills-table th , td {
     font-size: 20px;

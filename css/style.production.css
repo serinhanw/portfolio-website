@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /* Colors used
 
 Primary Color (Teal-ish): #013552; #0e2f44;
@@ -97,8 +90,6 @@ button, .button {
   a color in RBGA format. 0,0,0,# is black */
   border-bottom: 3px solid #720c13;
   /* transition: [transition-property] ]transition-duration][transition-timing-funciton] [transition-delay] */
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
 .button {
@@ -117,8 +108,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 * {
   /* * universal selector applies styling to all HTML elements */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .profile {
@@ -136,21 +126,14 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .page-footer {
   clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
   margin-top: 100px;
 }
 
 
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
@@ -159,27 +142,21 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .page-header__item:first-child {
   /* passed in this order: grow, shrink, basis */
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 150px;
-          flex: 0 0 150px;
+  flex: 0 0 150px;
   height: 85px;
 }
 
 .page-header__item:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 200px;
   text-align: right;
 
 }
 
 .navigation-list {
   list-style-type: none;
-  white-space: nowrap;
+
 }
 
 .navigation-list li {
@@ -203,13 +180,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 /* Start of About page */
 
 #main__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
   margin: 0 50px;
 }
@@ -266,30 +238,22 @@ td {
 }
 
 .sun  { /* animation-duration, animation-name, animation-iteration-count, animation-direction, animation-timing */
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 .cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
 
 .cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 /* End of About page */
 /* Start of Contact page */
 #contact-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -322,9 +286,7 @@ form {
 
 @supports (display: grid) {
   .grid {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     /* as long as columns are specified, rows property defaults to auto */
     /* columns 300px,300,300; fractions are better than pixels bc more resopnsive */
@@ -362,8 +324,10 @@ section h1 {
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
-    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+  .navigation-list {
+    white-space: nowrap;
   }
   .navigation-list__item {
     font-size: 18px;
@@ -390,15 +354,12 @@ section h1 {
 }
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
   .profile {
     position: relative;
-    display: -ms-grid;
     display: grid;
     margin-top: auto;
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     text-align: center;
   }
@@ -406,23 +367,16 @@ section h1 {
     margin: 30px 30px 15px 30px;
   }
   .home-welcome {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    -ms-grid-column-span: 0;
+    grid-column-start: 1;
     grid-column-end: 1;
-    -ms-grid-row: 1;
-        grid-row-start: 1;
-    -ms-grid-row-span: 1;
+    grid-row-start: 1;
     grid-row-end: 2;
     text-align: center;
   }
   .my-portrait {
-    display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-right: -40px;
+    justify-content: center;
+    margin-left: 40px;
   }
   .skills-table th , td {
     font-size: 20px;
@@ -438,18 +392,6 @@ section h1 {
   }
 }
 
-@-webkit-keyframes color-change { /* pecentages more accurate then from-to */
-  0% {
-    fill: #fcffad;
-  }
-  50% {
-    fill: #edc655;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
-
 @keyframes color-change { /* pecentages more accurate then from-to */
   0% {
     fill: #fcffad;
@@ -461,43 +403,19 @@ section h1 {
     fill: #f76414;
   }
 }
-@-webkit-keyframes cloud-move { /* postives right or down; negatives left or up */
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
-}
 @keyframes cloud-move { /* postives right or down; negatives left or up */
   from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
   to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
-}
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(200px, 50px);
   }
 }
 @keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
   to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
