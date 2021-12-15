@@ -186,6 +186,32 @@ button:hover, button:focus, .button:hover, .button:focus {
   margin: 0 50px;
 }
 
+.skills h3 {
+  color: #0e2f44;
+}
+
+.tech-stack {
+  list-style-type: none;
+}
+
+.tech-stack h4 {
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.tech-stack li {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+
+.about-me__item {
+  font-size: 20px;
+  margin-bottom: -60px;
+}
+
+
 .about-me__item {
   font-size: 20px;
   margin-bottom: -60px;
